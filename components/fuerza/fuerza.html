@@ -1,0 +1,254 @@
+<style>
+  .videos {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .videos iframe {
+    flex: 1;
+    height: 300px;
+    max-width: calc(33.333% - 10px);
+  }
+
+  .exercise-container {
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  details {
+    background-color: #121212;
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+
+  details:hover {
+    background-color: #1e1e1e;
+  }
+
+  summary {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffa500;
+    padding: 5px 0;
+  }
+
+  summary::-webkit-details-marker {
+    color: #ffa500;
+  }
+
+  details[open] summary {
+    color: #ff4500;
+  }
+
+  p {
+    margin-top: 10px;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+
+  p strong {
+    color: #ffa500;
+  }
+
+  .playlist-section {
+    background-color: #121212;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+  }
+
+  .playlist-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  audio {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    background-color: #222;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #playlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #playlist li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s ease;
+  }
+
+  #playlist li:last-child {
+    border-bottom: none;
+  }
+
+  #playlist li a {
+    text-decoration: none;
+    color: #ffa500;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+  }
+
+  #playlist li:hover {
+    background-color: #1e1e1e;
+  }
+
+  #playlist li.active {
+    background-color: #ff4500;
+  }
+
+  #playlist li.active a {
+    color: #fff;
+  }
+
+  #playlist li a:hover {
+    color: #fff;
+  }
+</style>
+
+<h1>
+  Desde Elite Training te vamos a ayudar a transformar tu cuerpo por completo
+</h1>
+
+<section class="videos">
+  <iframe
+    src="https://www.youtube.com/embed/s9O7FvQoVt0"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+
+  <iframe
+    src="https://www.youtube.com/embed/eh0-Zj11DHs"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+
+  <iframe
+    src="https://www.youtube.com/embed/nn5j7_wEDWo"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</section>
+
+<section class="exercise-container">
+  <details>
+    <summary>Pecho</summary>
+    <p>
+      <strong>Press banca</strong> <br />
+      El press banca es el ejercicio estrella, junto con las flexiones, cuando
+      hablamos de trabajar el pectoral. Además, es un ejercicio que va a
+      trabajar también nuestros hombros (especialmente la porción anterior) y
+      los tríceps (por ejemplo, cuanto más cerrado sea nuestro agarre más
+      trabajarán los tríceps).
+    </p>
+  </details>
+
+  <details>
+    <summary>Espalda</summary>
+    <p>
+      <strong>Dominadas</strong> <br />
+      Ejercicio clásico y que, siempre que sea posible, no debería faltar en
+      ninguna rutina por la gran cantidad de músculos implicados en él. Desde
+      nuestros antebrazos y manos para trabajar el agarre hasta nuestras piernas
+      para evitar los balanceos, las dominadas son, posiblemente, el ejercicio
+      que más musculatura trabaja.
+    </p>
+  </details>
+
+  <details>
+    <summary>Piernas</summary>
+    <p>
+      <strong>Sentadillas</strong> <br />
+      El ejercicio estrella cuando hablamos de trabajar el tren inferior, y uno
+      de los que más debates ha centrado en lo relativo a la técnica: debe pasar
+      o no la rodilla las punteras, debemos hacer sentadilla profunda o no, las
+      puntas de los pies hacia el frente o ligeramente hacia el exterior.
+    </p>
+  </details>
+
+  <details>
+    <summary>Bíceps</summary>
+    <p>
+      <strong>Bíceps curl con mancuernas</strong> <br />
+      El más conocido y habitual. Simplemente con dos mancuernas, de pie y en
+      una posición cómoda con la espalda recta y las piernas semiflexionadas
+      elevamos de forma alterna o al mismo tiempo cada muñeca contrayendo el
+      bíceps. Para aumentar el trabajo de todas las porciones del bíceps se
+      recomienda realizar un pequeño giro de muñeca durante el levantamiento.
+    </p>
+  </details>
+</section>
+
+<section class="playlist-section">
+  <div class="col-sm-12 textofuerza">
+    <p class="playlist-description">
+      Aquí tienes una lista de canciones que te ayudarán a dar el máximo en tus
+      sesiones en el gym.
+    </p>
+
+    <audio id="audio" preload="auto" tabindex="0" controls>
+      <source src="musica/Dead Inside - Muse.mp3" />
+      <source src="musica/Dead Inside - Muse.ogg" />
+    </audio>
+
+    <ul id="playlist">
+      <li class="active">
+        <a href="musica/Dead Inside - Muse.mp3">Muse - Dead Inside</a>
+      </li>
+      <li>
+        <a href="musica/Psycho - Muse.mp3">Muse - Psycho</a>
+      </li>
+      <li>
+        <a href="musica/In The End - Linkin Park.mp3"
+          >Linkin Park - In The End</a
+        >
+      </li>
+      <li>
+        <a href="musica/Numb - Linkin Park.mp3">Linkin Park - Numb</a>
+      </li>
+      <li>
+        <a href="musica/Aftermath - Muse.mp3">Muse - Aftermath</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- <script>
+  // Función para añadir el reproductor de música
+  (function () {
+    const audio = document.getElementById("audio");
+    const playlist = document.getElementById("playlist");
+    const links = playlist.getElementsByTagName("a");
+
+    for (const link of links) {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        audio.src = this.href;
+        audio.play();
+
+        // Remove active class from all links
+        for (const otherLink of links) {
+          otherLink.parentElement.classList.remove("active");
+        }
+
+        // Add active class to clicked link
+        this.parentElement.classList.add("active");
+      });
+    }
+  })();
+</script> -->

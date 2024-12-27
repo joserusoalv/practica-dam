@@ -1,0 +1,80 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: monospace;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+h1 {
+  background: linear-gradient(90deg, #ff4500, #ff8c00); /* Naranja fuerte */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+h2 {
+  background: linear-gradient(90deg, #ff8c00, #ffa500); /* Naranja medio */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+h3 {
+  background: linear-gradient(
+    90deg,
+    #ffa500,
+    #edbc60
+  ); /* Amarillo anaranjado */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+h4 {
+  background: linear-gradient(90deg, #edbc60, #f0e68c); /* Amarillo suave */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
+  font-weight: b;
+}
+
+#upBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(90deg, #ff8c00, #ffa500); /* Naranja medio */
+  color: black;
+  font-size: 30px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+#upBtn:hover {
+  background-color: rgb(32, 1, 1);
+}

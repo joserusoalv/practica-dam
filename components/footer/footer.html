@@ -1,0 +1,101 @@
+<style>
+  footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  section:first-child {
+    flex: 0 0 60%;
+    margin-right: 10px;
+    box-sizing: border-box;
+  }
+
+  section:last-child {
+    flex: 0 0 30%;
+    margin-left: 10px;
+    box-sizing: border-box;
+  }
+
+  .icons {
+    height: 50px;
+    width: 50px;
+    margin-left: 15px;
+  }
+
+  .icon-cc {
+    height: 50px;
+    width: 150px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    }
+
+  a {
+      text-decoration: none;
+    }
+
+   @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      align-items: flex-start; /
+    }
+
+    section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+</style>
+
+<footer>
+  <!-- Sección de Creative Commons -->
+  <section>
+    <p>
+      Esta web ha sido creada por José Francisco Ruso con fines lectivos como un
+      trabajo de clase y no se realizará ninguna actividad remunerada con la
+      misma. Esta obra está bajo una licencia de Creative Commons Reconocimiento
+      4.0 Internacional
+    </p>
+    <a href="https://creativecommons.org/">
+      <img class="icon-cc" src="imagenes/cc.png" alt="Creative Commons" />
+    </a>
+  </section>
+
+  <!-- Sección de Redes Sociales -->
+  <section>
+    <h3>Síguenos en RRSS</h3>
+    <div>
+      <a href="https://twitter.com/home?lang=es">
+        <img
+          class="icons"
+          src="imagenes/twitter.png"
+          alt="Twitter"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
+      </a>
+      <a href="https://www.facebook.com/">
+        <img
+          class="icons"
+          src="imagenes/facebook.jpg"
+          alt="Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
+      </a>
+      <a href="https://www.instagram.com/">
+        <img
+          class="icons"
+          src="imagenes/instagram.jpg"
+          alt="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
+      </a>
+    </div>
+  </section>
+</footer>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bebas+Neue|Shojumaru&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="./components/header/header.js"></script>
+    <script src="./components/footer/footer.js"></script>
+    <script src="./components/home/home.js"></script>
+    <script src="./components/peso/peso.js"></script>
+    <script src="./components/fuerza/fuerza.js"></script>
+    <script src="./components/contacto/contacto.js"></script>
+
+    <title>Elite Training</title>
+  </head>
+  <body>
+    <button type="button" onclick="topFunction()" id="upBtn" title="Go to top">
+      ↑
+    </button>
+    <app-header></app-header>
+
+    <main>
+      <div class="view-container">
+        <!-- Aquí se cargarán las vistas dinámicamente -->
+      </div>
+    </main>
+
+    <app-footer></app-footer>
+
+    <!-- El enrutador -->
+    <script src="js/router.js"></script>
+    <script src="js/botonarriba.js"></script>
+  </body>
+</html>

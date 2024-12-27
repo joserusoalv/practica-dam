@@ -1,0 +1,304 @@
+<style>
+  .carousel {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  }
+
+  .carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+  }
+
+  .carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+  }
+
+  .carousel-item img {
+    display: block;
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+  }
+
+  .carousel-control.prev {
+    left: 2%;
+  }
+
+  .carousel-control.next {
+    right: 2%;
+  }
+
+  .carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+  }
+
+  #carousel-1:checked ~ .control-1,
+  #carousel-2:checked ~ .control-2,
+  #carousel-3:checked ~ .control-3 {
+    display: block;
+  }
+
+  .carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+  }
+
+  .carousel-bullet:hover {
+    color: #aaaaaa;
+  }
+
+  #carousel-1:checked
+    ~ .control-1
+    ~ .carousel-indicators
+    li:nth-child(1)
+    .carousel-bullet,
+  #carousel-2:checked
+    ~ .control-2
+    ~ .carousel-indicators
+    li:nth-child(2)
+    .carousel-bullet,
+  #carousel-3:checked
+    ~ .control-3
+    ~ .carousel-indicators
+    li:nth-child(3)
+    .carousel-bullet {
+    color: #428bca;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 20px;
+    gap: 20px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+  }
+
+  .container > div:first-child {
+    width: 50%;
+  }
+
+  .container > div:last-child {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  ol {
+    font-size: 16px;
+  }
+
+  li {
+    margin-block: 16px;
+  }
+
+  strong {
+    display: block;
+    color: #f0e68c;
+  }
+</style>
+
+<!-- Inicio carrousel -->
+<div class="carousel">
+  <div class="carousel-inner">
+    <input
+      class="carousel-open"
+      type="radio"
+      id="carousel-1"
+      name="carousel"
+      aria-hidden="true"
+      hidden=""
+      checked="checked"
+    />
+    <div class="carousel-item">
+      <img src="imagenes/comida_1.jpg" alt="Comida 1" />
+    </div>
+    <input
+      class="carousel-open"
+      type="radio"
+      id="carousel-2"
+      name="carousel"
+      aria-hidden="true"
+      hidden=""
+    />
+    <div class="carousel-item">
+      <img src="imagenes/comida_2.jpg" alt="Comida 2" />
+    </div>
+    <input
+      class="carousel-open"
+      type="radio"
+      id="carousel-3"
+      name="carousel"
+      aria-hidden="true"
+      hidden=""
+    />
+    <div class="carousel-item">
+      <img src="imagenes/comida_3.jpg" alt="Comida 3" />
+    </div>
+    <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+    <label for="carousel-2" class="carousel-control next control-1">›</label>
+    <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+    <label for="carousel-3" class="carousel-control next control-2">›</label>
+    <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+    <label for="carousel-1" class="carousel-control next control-3">›</label>
+    <ol class="carousel-indicators">
+      <li>
+        <label for="carousel-1" class="carousel-bullet">•</label>
+      </li>
+      <li>
+        <label for="carousel-2" class="carousel-bullet">•</label>
+      </li>
+      <li>
+        <label for="carousel-3" class="carousel-bullet">•</label>
+      </li>
+    </ol>
+  </div>
+</div>
+<!-- Fin carrousel -->
+
+<div class="container">
+  <div>
+    <h2>Quieres perder peso??</h2>
+
+    <h3>Desde Elite Training te vamos a ayudar a conseguir tu objetivo</h3>
+    <ol>
+      <li>
+        <strong>Come más</strong>
+        Lo que tu metabolismo necesita para mantenerse activo. SÍ. Haz cinco
+        comidas al día. NO. Te saltes comidas
+      </li>
+
+      <li>
+        <strong>Desayuna como un/a rey/reina</strong>
+
+        Tu desayuno debe contener carbohidratos saludables; zumo natural o fruta
+        fresca; un lácteo desnatado o vegetal , café o té verde; proteínas sanas
+        para quitarte el hambre; alguna grasa saludable .
+      </li>
+
+      <li>
+        <strong>Pica entre horas</strong>
+        Además de ayudarte a mantener el metabolismo activo y consumiendo
+        energía, es la única forma de controlar el apetito y no llegar con un
+        hambre de lobo a la comida o a la cena.
+      </li>
+
+      <li>
+        <strong>No suprimas los hidratos</strong>
+        SÍ. Toma siempre hidratos en el desayuno y cómelos al medio día si por
+        la tarde vas a hacer ejercicio. NO. A los hidratos de carbono por la
+        noche.
+      </li>
+
+      <li>
+        <strong>Cuidado con el azúcar encubierto!</strong>
+        Sólo tienes que empezar a leer las etiquetas de lo que compras para
+        llevarte las manos a la cabeza y darte cuenta de la cantidad de azúcar
+        que ingieres sin querer. Menos energía. Todo ese azúcar es el que
+        provoca picos de insulina, que siempre tengas hambre y que estés baja de
+        energía.
+      </li>
+
+      <li>
+        <strong>¿Puedo comer dulces?</strong>
+        De acuerdo, pero sé inteligente. Lo importante es salirse de la "rueda
+        del azúcar" y tomar alimentos "reales".
+      </li>
+
+      <li>
+        <strong>¿Cómo y cuándo?</strong>
+        Los hidratos son recomendables por la mañana o al medio día si después
+        vas a hacer un esfuerzo físico, pero no por la noche, cuando se
+        acumularían durante el sueño. Para cenar son mucho más ligeras las
+        proteínas, sobre todo si has hecho ejercicio, ya que son el alimento de
+        los músculos. También es importante combinar bien los alimentos: pasta y
+        proteínas siempre "casan" con verduras, pero no van demasiado bien
+        juntas, ya que dan como resultado platos demasiado calóricos y difíciles
+        de digerir.
+      </li>
+
+      <li>
+        <strong>Sé tu propio chef</strong>
+        Apúntate a la moda de tupper y llévate la comida a la oficina, así
+        tendrás la seguridad de saber lo que te llevas a la boca. Fuera de casa,
+        y "de menú", es difícil que el aceite que usan para freír sea de oliva,
+        que los alimentos sean frescos o que las grasas sean insaturadas.
+      </li>
+
+      <li>
+        <strong>Cuida tus músculos</strong>
+        Son los mejores aliados de tu metabolismo. Tener en forma tu masa
+        muscular te supondrá quemar más calorías en reposo, ya que el músculo
+        consume mucha energía. También es la mejor garantía para no sufrir el
+        temido "efecto yo-yó" si haces dieta y para mantener tu peso estable.
+      </li>
+
+      <li>
+        <strong>Muévete más</strong>
+        Ya sabes que el ejercicio es un gran aliado para mantener el peso y no
+        tener que hacer dieta. Dejar el coche e ir caminando o en metro al
+        trabajo (es un magnífico gimnasio), subir las escaleras en lugar de
+        utilizar el ascensor, dar un paseo después de comer, … todo suma
+        actividad física y resta calorías al final del día.
+      </li>
+    </ol>
+  </div>
+
+  <div>
+    <img alt="Consejo comida" src="imagenes/consejo_comida.jpg" />
+    <img alt="Nutrición" src="imagenes/nutricion.jpg" />
+  </div>
+</div>

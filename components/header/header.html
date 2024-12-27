@@ -1,0 +1,87 @@
+<style>
+  /* Estilos para el navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40; /* Color oscuro */
+    padding: 10px 20px;
+  }
+
+  .navbar-brand {
+    color: #ff4500;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+
+  .navbar-toggler {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #ff4500;
+  }
+
+  .navbar-nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-item {
+    color: #ff4500;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+
+  .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+
+  nav a.active {
+    font-weight: bold;
+    color: #ff6347; /* Cambia el color del texto */
+    background-color: rgba(255, 99, 71, 0.2); /* Fondo de color sutil */
+    border-radius: 5px; /* Añadir bordes redondeados */
+  }
+
+  @media screen and (max-width: 768px) {
+    .navbar-nav {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #343a40;
+      width: 200px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .navbar-nav.active {
+      display: flex;
+      z-index: 10;
+    }
+
+    .navbar-toggler {
+      display: block;
+    }
+
+    .nav-item {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+<nav class="navbar">
+  <a class="navbar-brand" href="/" data-link>Elite Training</a>
+  <button type="button" class="navbar-toggler">&#9776;</button>
+
+  <div class="navbar-nav">
+    <a class="nav-item" href="/peso" data-link>Perder peso</a>
+    <a class="nav-item" href="/fuerza" data-link>Ganar fuerza</a>
+    <a class="nav-item" href="/contacto" data-link>Contacto</a>
+  </div>
+</nav>
