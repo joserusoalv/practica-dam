@@ -2,22 +2,39 @@
 class AppFuerza extends HTMLElement {
   constructor() {
     super();
-    const shadow = this.attachShadow({ mode: "open" });
+    // Crear el Shadow DOM
+    this.attachShadow({ mode: "open" });
+  }
 
-    // Cargar el HTML desde un archivo externo
-    fetch("./components/fuerza/fuerza.html")
-      .then((response) => response.text())
-      .then((html) => {
-        shadow.innerHTML = html;
+  async connectedCallback() {
+    try {
+      const response = await fetch("./components/fuerza/fuerza.html");
 
-        this.playMusic();
-      })
-      .catch((error) => console.error("Error cargando el HTML:", error));
+      if (!response.ok) {
+        throw new Error(`Error al cargar el HTML: ${response.statusText}`);
+      }
+
+      const html = await response.text();
+      this.shadowRoot.innerHTML = html;
+
+      this.playMusic(); // Inicializar funcionalidad de música
+    } catch (error) {
+      this.shadowRoot.innerHTML = /* html */ `
+          <app-error message="${error.message}"></app-error>
+        `;
+      console.error(error);
+    }
   }
 
   playMusic() {
     const audio = this.shadowRoot.getElementById("audio");
     const playlist = this.shadowRoot.getElementById("playlist");
+
+    if (!audio || !playlist) {
+      console.error("Elementos de audio o playlist no encontrados en el HTML.");
+      return;
+    }
+
     const links = playlist.getElementsByTagName("a");
 
     for (const link of links) {
@@ -26,12 +43,12 @@ class AppFuerza extends HTMLElement {
         audio.src = this.href;
         audio.play();
 
-        // Remove active class from all links
+        // Eliminar la clase "active" de todos los enlaces
         for (const otherLink of links) {
           otherLink.parentElement.classList.remove("active");
         }
 
-        // Add active class to clicked link
+        // Añadir la clase "active" al enlace clicado
         this.parentElement.classList.add("active");
       });
     }
