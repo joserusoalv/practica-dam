@@ -1,6 +1,7 @@
-// // router.js
+// router.js
 
-// // Función para cargar contenido dinámico
+// PRIMERA IMPLEMENTACIÓN CON VISTAS ESTÁTICAS
+// Función para cargar contenido dinámico
 // const loadContent = async (path) => {
 //   const viewContainer = document.querySelector(".view-container");
 //   try {
@@ -74,7 +75,7 @@
 // // Carga inicial
 // document.addEventListener("DOMContentLoaded", router);
 
-// router.js
+// SEGUNDA IMPLEMENTACIÓN CON COMPONENTES DINÁMICOS
 // Función para cargar un componente dinámicamente
 const loadComponent = async (path) => {
   const viewContainer = document.querySelector(".view-container");
@@ -100,14 +101,6 @@ const loadComponent = async (path) => {
 
   viewContainer.innerHTML = ""; // Limpiar el contenedor
   viewContainer.appendChild(component);
-};
-
-// Manejo de rutas
-const routes = {
-  "/": "app-home",
-  "/fuerza": "app-fuerza",
-  "/peso": "app-peso",
-  "/contacto": "app-contacto",
 };
 
 // Cambia la ruta sin recargar la página

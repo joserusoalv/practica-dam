@@ -19,7 +19,6 @@ class AppContacto extends HTMLElement {
       this.shadowRoot.innerHTML = /* html */ `
         <app-error message="${error.message}"></app-error>
       `;
-
       console.error(error);
     }
   }

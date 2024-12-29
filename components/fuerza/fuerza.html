@@ -227,28 +227,3 @@
     </ul>
   </div>
 </section>
-
-<!-- <script>
-  // Función para añadir el reproductor de música
-  (function () {
-    const audio = document.getElementById("audio");
-    const playlist = document.getElementById("playlist");
-    const links = playlist.getElementsByTagName("a");
-
-    for (const link of links) {
-      link.addEventListener("click", function (event) {
-        event.preventDefault();
-        audio.src = this.href;
-        audio.play();
-
-        // Remove active class from all links
-        for (const otherLink of links) {
-          otherLink.parentElement.classList.remove("active");
-        }
-
-        // Add active class to clicked link
-        this.parentElement.classList.add("active");
-      });
-    }
-  })();
-</script> -->

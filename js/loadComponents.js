@@ -1,3 +1,6 @@
+/**
+ * @deprecated No lo estoy usando, fue la primera POC para cargar componentes
+ */
 document.addEventListener("DOMContentLoaded", () => {
   const loadComponent = async (selector, file) => {
     try {
